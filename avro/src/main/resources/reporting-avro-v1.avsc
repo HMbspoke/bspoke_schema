@@ -1,0 +1,181 @@
+{
+  "type": "record",
+  "namespace": "no.bspoke.reporting.avro",
+  "name": "reportingAvroSchema",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "size": 30,
+      "doc": "Database-ID, global attribute"
+    },
+    {
+      "name": "migrertId",
+      "type": "string",
+      "size": 30,
+      "doc": "kostra-rapporteringsID, global attribute for system"
+    },
+    {
+      "name": "startDato",
+      "type": "date",
+      "size": 300,
+      "doc": "global attribute for startdato"
+    },
+    {
+      "name": "sluttDato",
+      "type": "date"
+      "doc": "global attribute for sluttdato"
+    },
+    {
+      "name": "presisering",
+      "type": "string",
+      "size": 300,
+      "doc": "global attribute for sluttdato"
+    },
+    {
+      "name": "fagsystemType",
+      "type": "record",
+      "doc": "informasjon om fagsystem",
+      "field": [
+        {
+            "name": "leverandor"
+            "type": "string",
+            "size": 300,
+            "doc": "levarandor til fagsystem"
+        },
+        {
+            "name": "navn"
+            "type": "string",
+            "size": 300,
+            "doc": "navnet til fagsystem"
+        },
+        {
+            "name": "versjon"
+            "type": "string",
+            "size": 100,
+            "doc": "versjonen til fagsystem"
+        }
+      ]
+    },
+    {
+      "name": "avgiverType",
+      "type": "record",
+      "doc": "kommune som rapporterer",
+      "field": [
+        {
+            "name": "organisasjonssNummer"
+            "type": "string",
+            "size": 9,
+            "doc": "levarandor til fagsystem"
+        },
+        {
+            "name": "kommuneNummer"
+            "type": "string",
+            "size": 4,
+            "doc": "4-sifret kommunenummer"
+        },
+        {
+            "name": "kummuneNavn"
+            "type": "string",
+            "size": 250,
+            "doc": "kommunens navn"
+        },
+        {
+            "name": "Bydelsnummer"
+            "type": "string",
+            "size": 2,
+            "doc": "2-sifret bydelsnummer for bydelene i Oslo"
+        },
+        {
+            "name": "Bydelsnavn"
+            "type": "string",
+            "size": 250,
+            "doc": "Bydelsnavn ved rapportering av bydelene i Oslo"
+        },
+        {
+            "name": "Distriktsnummer"
+            "type": "string",
+            "size": 3,
+            "doc": "2 og 3-sifret Distriktsnummer"
+        }
+      ]
+    },
+    {
+      "name": "sakType",
+      "type": "record",
+      "doc": "Saksmappe for et barn (tidl. Individ)",
+      "field": [
+        {
+            "name": "Melding"
+            "type": "enum"
+            "doc": "MeldingType"
+        },
+        {
+            "name": "Undersokelse"
+            "type": "enum"
+            "doc": "UndersokelseType"
+        },
+        {
+            "name": "Plan"
+            "type": "enum"
+            "doc": "PlanType"
+        },
+        {
+            "name": "Tiltak"
+            "type": "enum"
+            "doc": "TiltakType"
+        },
+        {
+            "name": "Vedtak"
+            "type": "enum"
+            "doc": "VedtakType"
+        },
+        {
+            "name": "Ettervern"
+            "type": "enum"
+            "doc": "EttervernType"
+        },
+        {
+            "name": "OversendelseBarneverntjeneste"
+            "type": "enum"
+            "doc": "OversendelseBarneverntjenesteType"
+        },
+        {
+            "name": "Relasjon"
+            "type": "enum"
+            "doc": "MeldingType"
+        },
+        {
+            "name": "Undersokelse"
+            "type": "enum"
+            "doc": "UndersokelseType"
+        },
+        {
+            "name": "Plan"
+            "type": "enum"
+            "doc": "PlanType"
+        },
+        {
+            "name": "Tiltak"
+            "type": "enum"
+            "doc": "TiltakType"
+        },
+        {
+            "name": "Vedtak"
+            "type": "enum"
+            "doc": "VedtakType"
+        },
+        {
+            "name": "Ettervern"
+            "type": "enum"
+            "doc": "EttervernType"
+        },
+        {
+            "name": "OversendelseBarneverntjeneste"
+            "type": "enum"
+            "doc": "OversendelseBarneverntjenesteType"
+        }
+      ]
+    }
+  ]
+}
